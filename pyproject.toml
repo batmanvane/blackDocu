@@ -1,0 +1,42 @@
+[project]
+name = "blackdocu"
+version = "0.1.0"
+description = "Lokale Pseudonymisierung von Schülertexten (Phase 1: synthetische Daten)"
+requires-python = ">=3.12,<3.14"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+dependencies = [
+    "fastapi>=0.163.2",
+    "noirdoc[full]==0.2.*",
+    "ollama>=0.4",
+    "pandas>=2.2",
+    "pyyaml>=6.0",
+    "rapidfuzz>=3.9",
+    "rich>=13.7",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+blackdocu = "blackdocu.cli:main"
+
+[dependency-groups]
+dev = [
+    "playwright>=1.65.2",
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/blackdocu"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: lädt ML-Modelle oder ruft Ollama auf"]
+addopts = "-m 'not slow'"
+
+[tool.ruff]
+line-length = 100

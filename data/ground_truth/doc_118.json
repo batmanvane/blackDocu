@@ -1,0 +1,43 @@
+{
+  "id": "doc_118",
+  "type": "elternbrief",
+  "pool": "holdout",
+  "person": "<<SCHUELER_08>>",
+  "direct": [
+    {
+      "text": "Mia Lorenz",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Mias",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Mia",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Wendland",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Hamburg",
+      "category": "ORT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "nach dem Wechsel von der Waldorfschule in Hamburg",
+      "category": "BIOGRAFIE",
+      "expected": "generalize",
+      "generalized": "nach einem Schulwechsel"
+    }
+  ],
+  "dropped": [
+    "Lorenz, Mia",
+    "seit die Familie im Frauenhaus lebt"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

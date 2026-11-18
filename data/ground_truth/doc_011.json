@@ -1,0 +1,42 @@
+{
+  "id": "doc_011",
+  "type": "zeugnisbemerkung",
+  "person": "<<SCHUELER_03>>",
+  "direct": [
+    {
+      "text": "Ben Yilmaz",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Ben",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Ben Yilmaaz",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Wendland",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Murat Yilmaz",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "Ergotherapie Lindenhof",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "wohnt seit dem Sommer in einer Wohngruppe",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

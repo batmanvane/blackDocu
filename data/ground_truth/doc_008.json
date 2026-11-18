@@ -1,0 +1,32 @@
+{
+  "id": "doc_008",
+  "type": "elternbrief",
+  "person": "<<SCHUELER_14>>",
+  "direct": [
+    {
+      "text": "Clara Seidel",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Claras",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "ist im Herbst aus der Ukraine zu uns gekommen",
+      "category": "HERKUNFT",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "22.02.2016"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

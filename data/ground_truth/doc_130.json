@@ -1,0 +1,40 @@
+{
+  "id": "doc_130",
+  "type": "schuelergutachten",
+  "pool": "holdout",
+  "person": "<<SCHUELER_24>>",
+  "direct": [
+    {
+      "text": "Leni Schuster",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Leni",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lenis",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "18.12.2014",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "der einzige Junge mit Hörgerät an unserer Schule",
+      "category": "MERKMAL",
+      "expected": "local_only",
+      "generalized": "ein Kind mit besonderem Unterstützungsbedarf"
+    }
+  ],
+  "dropped": [],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

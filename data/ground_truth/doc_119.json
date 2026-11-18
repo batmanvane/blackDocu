@@ -1,0 +1,33 @@
+{
+  "id": "doc_119",
+  "type": "projektbericht",
+  "pool": "holdout",
+  "person": "<<SCHUELER_20>>",
+  "direct": [
+    {
+      "text": "Ida Wolff",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Ida",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Wendland",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "02.02.2014",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "Bundessiegerin bei Jugend forscht",
+    "Idas",
+    "seit der Inhaftierung des Vaters"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

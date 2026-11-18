@@ -1,0 +1,46 @@
+{
+  "id": "doc_206",
+  "type": "zeugnisbemerkung",
+  "pool": "holdout2",
+  "person": "<<SCHUELER_09>>",
+  "direct": [
+    {
+      "text": "Leon Petrović",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Leons",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Leon",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "12.01.2012",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "die Tante Gisela Brenner",
+      "category": "PERSON_DRITTE"
+    },
+    {
+      "text": "0331 8322309",
+      "category": "KONTAKT_TELEFON"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "Olga Petrović",
+    "die Eltern stammen aus Syrien",
+    "seit der Inhaftierung des Vaters",
+    "seit der schweren Erkrankung der Mutter"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

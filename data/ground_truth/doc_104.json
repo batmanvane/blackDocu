@@ -1,0 +1,44 @@
+{
+  "id": "doc_104",
+  "type": "projektbericht",
+  "pool": "holdout",
+  "person": "<<SCHUELER_10>>",
+  "direct": [
+    {
+      "text": "Hannah Vogt",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Hannah",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Hannahs",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Petra Vogt",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "19.03.2013",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Ergotherapie Lindenhof",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "Vogt, Hannah",
+    "seit der schweren Erkrankung der Mutter"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

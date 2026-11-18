@@ -1,0 +1,34 @@
+{
+  "id": "doc_026",
+  "type": "zeugnisbemerkung",
+  "person": "<<SCHUELER_13>>",
+  "direct": [
+    {
+      "text": "Elias Hartmann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Eliass",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Eli",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Elias",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Krüger",
+      "category": "PERSON_LEHRKRAFT"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "nach der Trennung der Eltern"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

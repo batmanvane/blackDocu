@@ -1,0 +1,37 @@
+{
+  "id": "doc_031",
+  "type": "zeugnisbemerkung",
+  "person": "<<SCHUELER_19>>",
+  "direct": [
+    {
+      "text": "Jakob Friedrich",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Jaki",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "17.12.2014",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Rostock",
+      "category": "ORT"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "Jakob Friedrrich",
+    "der Vater ist seit dem Frühjahr arbeitslos",
+    "nach der Trennung der Eltern",
+    "seit dem Umzug aus Rostock"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

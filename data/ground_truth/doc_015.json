@@ -1,0 +1,46 @@
+{
+  "id": "doc_015",
+  "type": "schuelergutachten",
+  "person": "<<SCHUELER_10>>",
+  "direct": [
+    {
+      "text": "Hannah Vogt",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Hanni",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Petra Vogt",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "13.10.2013",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "wohnt seit dem Sommer in einer Wohngruppe",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    },
+    {
+      "text": "das einzige Kind mit Rollstuhl in der Jahrgangsstufe",
+      "category": "MERKMAL",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "Vogt, Hannah",
+    "nimmt wegen ihres Glaubens nicht am Schwimmunterricht teil"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "doc_032",
+  "type": "foerderplan",
+  "person": "<<SCHUELER_22>>",
+  "direct": [
+    {
+      "text": "Zoe Pohl",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Zoes",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "zoe",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Zoe",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "15.12.2016",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Praxis Dr. Weber",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "wohnt seit dem Sommer in einer Wohngruppe",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

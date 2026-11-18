@@ -1,0 +1,45 @@
+{
+  "id": "doc_024",
+  "type": "projektbericht",
+  "person": "<<SCHUELER_14>>",
+  "direct": [
+    {
+      "text": "Clara Seidel",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Claras",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Clara",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "SV Grün-Weiß Werder",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "die Landesmeisterin im Schach",
+      "category": "MERKMAL",
+      "expected": "generalize"
+    },
+    {
+      "text": "wegen der ADHS-Diagnose",
+      "category": "GESUNDHEIT",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "seit dem Tod der Großmutter"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

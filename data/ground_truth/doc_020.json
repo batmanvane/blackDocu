@@ -1,0 +1,38 @@
+{
+  "id": "doc_020",
+  "type": "schuelergutachten",
+  "person": "<<SCHUELER_05>>",
+  "direct": [
+    {
+      "text": "Jonas Kowalski",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Jonas",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "11.04.2012",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "SV Grün-Weiß Werder",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "der Vater ist seit dem Frühjahr arbeitslos",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

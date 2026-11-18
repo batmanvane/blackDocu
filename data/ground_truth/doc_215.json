@@ -1,0 +1,47 @@
+{
+  "id": "doc_215",
+  "type": "schuelergutachten",
+  "pool": "holdout2",
+  "person": "<<SCHUELERIN_04>>",
+  "direct": [
+    {
+      "text": "Sophie Albrecht",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Sophie",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Birgit Albrecht",
+      "category": "PERSON_GESCHWISTER"
+    },
+    {
+      "text": "08.08.2014",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Am Weinberg 51",
+      "category": "ADRESSE"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "der einzige Junge mit Hörgerät an unserer Schule",
+      "category": "MERKMAL",
+      "expected": "local_only",
+      "generalized": "ein Kind mit besonderem Unterstützungsbedarf"
+    }
+  ],
+  "dropped": [
+    "Sophie A.",
+    "Trainer Marco Rinaldi"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

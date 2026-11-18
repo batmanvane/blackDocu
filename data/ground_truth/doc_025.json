@@ -1,0 +1,30 @@
+{
+  "id": "doc_025",
+  "type": "schuelergutachten",
+  "person": "<<SCHUELER_16>>",
+  "direct": [
+    {
+      "text": "Amira Haddad",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Amiras",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Amira",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "wegen der ADHS-Diagnose"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

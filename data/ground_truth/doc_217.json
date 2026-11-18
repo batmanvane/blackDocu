@@ -1,0 +1,60 @@
+{
+  "id": "doc_217",
+  "type": "foerderplan",
+  "pool": "holdout2",
+  "person": "<<SCHUELER_25>>",
+  "direct": [
+    {
+      "text": "Karim Aydın",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Karim",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Karims",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "23.05.2015",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "die Nachbarin Frau Kowalczyk",
+      "category": "PERSON_DRITTE"
+    },
+    {
+      "text": "Am Weinberg 64",
+      "category": "ADRESSE"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "seit der Inhaftierung des Vaters",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer belastenden Situation in der Familie"
+    },
+    {
+      "text": "Bundessiegerin bei Jugend forscht",
+      "category": "MERKMAL",
+      "expected": "generalize",
+      "generalized": "sehr erfolgreich bei einem Wettbewerb"
+    },
+    {
+      "text": "der einzige Junge mit Hörgerät an unserer Schule",
+      "category": "MERKMAL",
+      "expected": "local_only",
+      "generalized": "ein Kind mit besonderem Unterstützungsbedarf"
+    }
+  ],
+  "dropped": [],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

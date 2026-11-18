@@ -1,0 +1,42 @@
+{
+  "id": "doc_022",
+  "type": "foerderplan",
+  "person": "<<SCHUELER_02>>",
+  "direct": [
+    {
+      "text": "Maximilian Brandt",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Max",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Maximilians",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Maximilian",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Nele",
+      "category": "PERSON_GESCHWISTER"
+    },
+    {
+      "text": "Ergotherapie Lindenhof",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "seit dem Tod der Großmutter"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

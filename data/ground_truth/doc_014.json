@@ -1,0 +1,41 @@
+{
+  "id": "doc_014",
+  "type": "projektbericht",
+  "person": "<<SCHUELER_11>>",
+  "direct": [
+    {
+      "text": "Noah Gruber",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Noah",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Noahs",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Ralf Gruber",
+      "category": "PERSON_ELTERN"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "das einzige Kind mit Rollstuhl in der Jahrgangsstufe",
+      "category": "MERKMAL",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "nimmt wegen ihres Glaubens nicht am Schwimmunterricht teil",
+    "wegen der ADHS-Diagnose"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

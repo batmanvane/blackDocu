@@ -1,0 +1,54 @@
+{
+  "id": "doc_113",
+  "type": "elternbrief",
+  "pool": "holdout",
+  "person": "<<SCHUELER_02>>",
+  "direct": [
+    {
+      "text": "Maximilian Brandt",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Maximilian",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Maxi",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Maximilians",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Wendland",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Nele",
+      "category": "PERSON_GESCHWISTER"
+    },
+    {
+      "text": "05.11.2014",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "SV Grün-Weiß Werder",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "der einzige Junge mit Hörgerät an unserer Schule",
+      "category": "MERKMAL",
+      "expected": "local_only",
+      "generalized": "ein Kind mit besonderem Unterstützungsbedarf"
+    }
+  ],
+  "dropped": [
+    "die Eltern stammen aus Syrien"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

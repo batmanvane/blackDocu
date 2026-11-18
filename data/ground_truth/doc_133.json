@@ -1,0 +1,42 @@
+{
+  "id": "doc_133",
+  "type": "elternbrief",
+  "pool": "holdout",
+  "person": "<<SCHUELER_13>>",
+  "direct": [
+    {
+      "text": "Elias Hartmann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Elias",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Eli",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Wendland",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "19.07.2014",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "als Pflegekind bei den Großeltern",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "in einer besonderen Familiensituation"
+    }
+  ],
+  "dropped": [
+    "Eliass"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

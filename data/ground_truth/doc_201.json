@@ -1,0 +1,52 @@
+{
+  "id": "doc_201",
+  "type": "zeugnisbemerkung",
+  "pool": "holdout2",
+  "person": "<<SCHUELER_03>>",
+  "direct": [
+    {
+      "text": "Ben Yilmaz",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Bens",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Ben",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Wendland",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Murat Yilmaz",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "ben.yilmaz@web.de",
+      "category": "KONTAKT_EMAIL"
+    },
+    {
+      "text": "Kita Sonnenblume",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "der einzige Junge mit Hörgerät an unserer Schule",
+      "category": "MERKMAL",
+      "expected": "local_only",
+      "generalized": "ein Kind mit besonderem Unterstützungsbedarf"
+    }
+  ],
+  "dropped": [
+    "Yilmaz, Ben",
+    "die Eltern stammen aus Syrien",
+    "die Nachbarin Frau Kowalczyk"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

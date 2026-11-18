@@ -1,0 +1,45 @@
+{
+  "id": "doc_035",
+  "type": "schuelergutachten",
+  "person": "<<SCHUELER_09>>",
+  "direct": [
+    {
+      "text": "Leon Petrović",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Leon",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Olga Petrović",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "16.06.2015",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Musikschule Fröhlich",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "ist im Herbst aus der Ukraine zu uns gekommen",
+      "category": "HERKUNFT",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "wegen der ADHS-Diagnose",
+    "wohnt seit dem Sommer in einer Wohngruppe"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

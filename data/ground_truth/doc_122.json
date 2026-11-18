@@ -1,0 +1,42 @@
+{
+  "id": "doc_122",
+  "type": "foerderplan",
+  "pool": "holdout",
+  "person": "<<SCHUELER_24>>",
+  "direct": [
+    {
+      "text": "Leni Schuster",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Leni",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "mit diagnostiziertem Asperger-Syndrom",
+      "category": "GESUNDHEIT",
+      "expected": "local_only",
+      "generalized": "mit besonderem Förderbedarf"
+    },
+    {
+      "text": "wegen ihrer Diabetes-Erkrankung",
+      "category": "GESUNDHEIT",
+      "expected": "local_only",
+      "generalized": "aus gesundheitlichen Gründen"
+    }
+  ],
+  "dropped": [
+    "Lenis",
+    "Schuster, Leni",
+    "der einzige Junge mit Hörgerät an unserer Schule"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

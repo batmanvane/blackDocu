@@ -1,0 +1,20 @@
+# Wörter, die Stufe 2 (NER) nie maskieren soll – Lehrkräfte können die Liste erweitern.
+# Ein Fund wird verworfen, wenn ALLE seine Wörter hier stehen (oder Zahlen/Füllwörter sind).
+# Fächer
+Mathe Mathematik Bio Biologie Deutsch Englisch Französisch Latein Spanisch Russisch Polnisch
+Sachkunde Sachunterricht Sport Musik Kunst Physik Chemie Geschichte Erdkunde Geografie Geographie
+Informatik Ethik LER Religion Politik WAT Naturwissenschaften Gesellschaftswissenschaften NaWi GeWi
+# Schulbegriffe
+Schule Grundschule Klasse Klassenleitung Klassenlehrerin Klassenlehrer Lehrerkollegium Kollegium
+Schulsozialarbeit Schulleitung Elternhaus Eltern Förderplan Förderbedarf Gutachten Zeugnis
+Literaturteil Methodenteil Fazit Einleitung Quellen Proben Fotos Messreihe Präsentation Projekt
+Projektbericht Hausaufgaben Heftführung Stillarbeit Gruppenarbeit Pause Unterricht Raum Uhr
+Mo Di Mi Do Fr Montag Dienstag Mittwoch Donnerstag Freitag
+# Familie und Anrede (keine Namen)
+Vater Mutter Sohn Tochter Bruder Schwester Eltern Großeltern Großmutter Großvater Oma Opa Familie
+Damen Herren Erziehungsberechtigte Betreuer Betreuerin Bezugsperson
+# weitere Schulbegriffe
+Inklusion Schulalltag Schuljahr Halbjahr Gemeinschaft Gemeinschaftsschule Klassenteam Lehrerteam Team
+AG Lehrkraft Lehrkräfte Schüler Schülerin Schülerinnen Mitschüler Mitschülerin Nachhilfe Nachhilfeeinheiten
+Peer-Reviewer Check-ins Betreuungsplan Wohngruppe Akademische Förderung Ausgangslage Organisation Zeit
+Konzentrationsspanne Theorie Praxis Brücken Miteinander Miteinanders Hörverlust Kurzem

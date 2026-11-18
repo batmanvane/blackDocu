@@ -1,0 +1,42 @@
+{
+  "id": "doc_135",
+  "type": "schuelergutachten",
+  "pool": "holdout",
+  "person": "<<SCHUELER_24>>",
+  "direct": [
+    {
+      "text": "Leni Schuster",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "leni",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lenis",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "21.04.2010",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "die Eltern stammen aus Syrien",
+      "category": "HERKUNFT",
+      "expected": "local_only",
+      "generalized": "die Familie hat Migrationsgeschichte"
+    }
+  ],
+  "dropped": [
+    "seit der schweren Erkrankung der Mutter"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

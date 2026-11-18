@@ -1,0 +1,48 @@
+{
+  "id": "doc_012",
+  "type": "foerderplan",
+  "person": "<<SCHUELER_16>>",
+  "direct": [
+    {
+      "text": "Amira Haddad",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Amira",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "04.04.2015",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Kiel",
+      "category": "ORT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "seit dem Umzug aus Kiel",
+      "category": "BIOGRAFIE",
+      "expected": "generalize"
+    },
+    {
+      "text": "nimmt wegen ihres Glaubens nicht am Schwimmunterricht teil",
+      "category": "HERKUNFT",
+      "expected": "local_only"
+    },
+    {
+      "text": "das einzige Kind mit Rollstuhl in der Jahrgangsstufe",
+      "category": "MERKMAL",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

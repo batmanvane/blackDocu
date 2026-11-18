@@ -1,0 +1,46 @@
+{
+  "id": "doc_108",
+  "type": "elternbrief",
+  "pool": "holdout",
+  "person": "<<SCHUELER_09>>",
+  "direct": [
+    {
+      "text": "Leon Petrović",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Leons",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Olga Petrović",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "Gera",
+      "category": "ORT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "nach dem Wechsel von der Waldorfschule in Gera",
+      "category": "BIOGRAFIE",
+      "expected": "generalize",
+      "generalized": "nach einem Schulwechsel"
+    },
+    {
+      "text": "seit die Familie im Frauenhaus lebt",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer veränderten Wohnsituation"
+    }
+  ],
+  "dropped": [],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

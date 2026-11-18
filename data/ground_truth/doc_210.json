@@ -1,0 +1,54 @@
+{
+  "id": "doc_210",
+  "type": "schuelergutachten",
+  "pool": "holdout2",
+  "person": "<<SCHUELER_21>>",
+  "direct": [
+    {
+      "text": "Mats Lindqvist",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Mats",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "26.09.2012",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "mats.lindqvist@web.de",
+      "category": "KONTAKT_EMAIL"
+    },
+    {
+      "text": "Musikschule Fröhlich",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "als Pflegekind bei den Großeltern",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "in einer besonderen Familiensituation"
+    },
+    {
+      "text": "seit der schweren Erkrankung der Mutter",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer belastenden Situation in der Familie"
+    }
+  ],
+  "dropped": [
+    "Henrik Lindqvist",
+    "Matss",
+    "die Tante Gisela Brenner"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

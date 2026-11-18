@@ -1,0 +1,50 @@
+{
+  "id": "doc_102",
+  "type": "foerderplan",
+  "pool": "holdout",
+  "person": "<<SCHUELER_15>>",
+  "direct": [
+    {
+      "text": "Finn Ostermann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Finn Osttermann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Finn",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Finns",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "13.05.2010",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Kita Sonnenblume",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "Bundessiegerin bei Jugend forscht",
+      "category": "MERKMAL",
+      "expected": "generalize",
+      "generalized": "sehr erfolgreich bei einem Wettbewerb"
+    }
+  ],
+  "dropped": [
+    "seit der schweren Erkrankung der Mutter"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

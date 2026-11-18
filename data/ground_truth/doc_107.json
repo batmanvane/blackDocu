@@ -1,0 +1,44 @@
+{
+  "id": "doc_107",
+  "type": "foerderplan",
+  "pool": "holdout",
+  "person": "<<SCHUELER_05>>",
+  "direct": [
+    {
+      "text": "Jonas Kowalski",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Jonass",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Jonas Kwalski",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "05.01.2013",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Musikschule Fröhlich",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "seit der Inhaftierung des Vaters",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer belastenden Situation in der Familie"
+    }
+  ],
+  "dropped": [],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

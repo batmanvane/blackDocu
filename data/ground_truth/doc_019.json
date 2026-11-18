@@ -1,0 +1,38 @@
+{
+  "id": "doc_019",
+  "type": "projektbericht",
+  "person": "<<SCHUELER_15>>",
+  "direct": [
+    {
+      "text": "Finn Ostermann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Finn",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Finns",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Jugendclub Kiste",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "nach der Trennung der Eltern",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

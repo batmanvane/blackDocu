@@ -1,0 +1,50 @@
+{
+  "id": "doc_129",
+  "type": "projektbericht",
+  "pool": "holdout",
+  "person": "<<SCHUELER_04>>",
+  "direct": [
+    {
+      "text": "Sophie Albrecht",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Sophies",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Albrecht, Sophie",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Birgit Albrecht",
+      "category": "PERSON_GESCHWISTER"
+    },
+    {
+      "text": "SV Grün-Weiß Werder",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "seit der schweren Erkrankung der Mutter",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer belastenden Situation in der Familie"
+    },
+    {
+      "text": "mit diagnostiziertem Asperger-Syndrom",
+      "category": "GESUNDHEIT",
+      "expected": "local_only",
+      "generalized": "mit besonderem Förderbedarf"
+    }
+  ],
+  "dropped": [],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

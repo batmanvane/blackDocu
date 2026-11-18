@@ -1,0 +1,68 @@
+{
+  "id": "doc_219",
+  "type": "projektbericht",
+  "pool": "holdout2",
+  "person": "<<SCHUELERIN_04>>",
+  "direct": [
+    {
+      "text": "Sophie Albrecht",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Sophie Albrcht",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Sophies",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Krüger",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Birgit Albrecht",
+      "category": "PERSON_GESCHWISTER"
+    },
+    {
+      "text": "28.06.2010",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "der Logopäde Herr Okafor",
+      "category": "PERSON_DRITTE"
+    },
+    {
+      "text": "0176 4563555",
+      "category": "KONTAKT_TELEFON"
+    },
+    {
+      "text": "Kita Sonnenblume",
+      "category": "EINRICHTUNG"
+    },
+    {
+      "text": "Hamburg",
+      "category": "ORT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "nach dem Wechsel von der Waldorfschule in Hamburg",
+      "category": "BIOGRAFIE",
+      "expected": "generalize",
+      "generalized": "nach einem Schulwechsel"
+    },
+    {
+      "text": "seit der schweren Erkrankung der Mutter",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer belastenden Situation in der Familie"
+    }
+  ],
+  "dropped": [
+    "als Pflegekind bei den Großeltern"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

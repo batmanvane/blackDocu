@@ -1,0 +1,49 @@
+{
+  "id": "doc_028",
+  "type": "elternbrief",
+  "person": "<<SCHUELER_04>>",
+  "direct": [
+    {
+      "text": "Sophie Albrecht",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Sophie A.",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Sophie Albbrecht",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Birgit Albrecht",
+      "category": "PERSON_GESCHWISTER"
+    },
+    {
+      "text": "Ergotherapie Lindenhof",
+      "category": "EINRICHTUNG"
+    },
+    {
+      "text": "Neuruppin",
+      "category": "ORT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "wohnt seit dem Sommer in einer Wohngruppe",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "seit dem Tod der Großmutter",
+    "seit dem Umzug aus Neuruppin"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

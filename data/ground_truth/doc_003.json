@@ -1,0 +1,46 @@
+{
+  "id": "doc_003",
+  "type": "elternbrief",
+  "person": "<<SCHUELER_04>>",
+  "direct": [
+    {
+      "text": "Sophie Albrecht",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Birgit Albrecht",
+      "category": "PERSON_GESCHWISTER"
+    },
+    {
+      "text": "02.06.2011",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Ergotherapie Lindenhof",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "die Familie spricht zu Hause Arabisch",
+      "category": "HERKUNFT",
+      "expected": "local_only"
+    },
+    {
+      "text": "seit dem Tod der Großmutter",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "Albrecht, Sophie",
+    "die festgestellte Lese-Rechtschreib-Schwäche"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

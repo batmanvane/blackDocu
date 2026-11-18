@@ -1,0 +1,44 @@
+{
+  "id": "doc_205",
+  "type": "schuelergutachten",
+  "pool": "holdout2",
+  "person": "<<SCHUELERIN_10>>",
+  "direct": [
+    {
+      "text": "Hannah Vogt",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Hannahs",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Petra Vogt",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "03.01.2011",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "hannah.vogt@web.de",
+      "category": "KONTAKT_EMAIL"
+    },
+    {
+      "text": "Ergotherapie Lindenhof",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "der einzige Junge mit Hörgerät an unserer Schule",
+    "ihre Freundin Jule Martens"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

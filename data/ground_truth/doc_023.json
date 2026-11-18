@@ -1,0 +1,37 @@
+{
+  "id": "doc_023",
+  "type": "elternbrief",
+  "person": "<<SCHUELER_24>>",
+  "direct": [
+    {
+      "text": "Leni Schuster",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lenis",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Wendland",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "25.08.2010",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "nimmt wegen ihres Glaubens nicht am Schwimmunterricht teil",
+      "category": "HERKUNFT",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "die Familie spricht zu Hause Arabisch",
+    "wegen der ADHS-Diagnose"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

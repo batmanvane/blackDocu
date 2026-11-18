@@ -1,0 +1,40 @@
+{
+  "id": "doc_005",
+  "type": "schuelergutachten",
+  "person": "<<SCHUELER_12>>",
+  "direct": [
+    {
+      "text": "Lina Becker",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lina",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Linas",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Becker, Lina",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "07.05.2011",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "der Vater ist seit dem Frühjahr arbeitslos",
+    "nach der Trennung der Eltern",
+    "nimmt wegen ihres Glaubens nicht am Schwimmunterricht teil"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

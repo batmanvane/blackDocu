@@ -1,0 +1,48 @@
+{
+  "id": "doc_021",
+  "type": "zeugnisbemerkung",
+  "person": "<<SCHUELER_04>>",
+  "direct": [
+    {
+      "text": "Sophie Albrecht",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Sophie Alrecht",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Birgit Albrecht",
+      "category": "PERSON_GESCHWISTER"
+    },
+    {
+      "text": "08.02.2012",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Kita Sonnenblume",
+      "category": "EINRICHTUNG"
+    },
+    {
+      "text": "Rostock",
+      "category": "ORT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "seit dem Umzug aus Rostock",
+      "category": "BIOGRAFIE",
+      "expected": "generalize"
+    }
+  ],
+  "dropped": [
+    "Sophies"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

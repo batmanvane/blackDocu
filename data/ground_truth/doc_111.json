@@ -1,0 +1,39 @@
+{
+  "id": "doc_111",
+  "type": "zeugnisbemerkung",
+  "pool": "holdout",
+  "person": "<<SCHUELER_21>>",
+  "direct": [
+    {
+      "text": "Mats Lindqvist",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Mats",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Henrik Lindqvist",
+      "category": "PERSON_ELTERN"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "der einzige Junge mit Hörgerät an unserer Schule",
+      "category": "MERKMAL",
+      "expected": "local_only",
+      "generalized": "ein Kind mit besonderem Unterstützungsbedarf"
+    }
+  ],
+  "dropped": [
+    "die Eltern stammen aus Syrien",
+    "wegen ihrer Diabetes-Erkrankung"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

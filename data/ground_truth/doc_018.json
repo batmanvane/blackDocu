@@ -1,0 +1,33 @@
+{
+  "id": "doc_018",
+  "type": "elternbrief",
+  "person": "<<SCHUELER_16>>",
+  "direct": [
+    {
+      "text": "Amira Haddad",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Amira",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Amiras",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Krüger",
+      "category": "PERSON_LEHRKRAFT"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "Kita Sonnenblume",
+    "nach der Trennung der Eltern",
+    "wegen der ADHS-Diagnose",
+    "wohnt seit dem Sommer in einer Wohngruppe"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

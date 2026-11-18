@@ -1,0 +1,60 @@
+{
+  "id": "doc_131",
+  "type": "zeugnisbemerkung",
+  "pool": "holdout",
+  "person": "<<SCHUELER_21>>",
+  "direct": [
+    {
+      "text": "Mats Lindqvist",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Matss",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Mats Lindqviist",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Mats",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Henrik Lindqvist",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "07.05.2010",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "SV Grün-Weiß Werder",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "die Eltern stammen aus Syrien",
+      "category": "HERKUNFT",
+      "expected": "local_only",
+      "generalized": "die Familie hat Migrationsgeschichte"
+    },
+    {
+      "text": "Bundessiegerin bei Jugend forscht",
+      "category": "MERKMAL",
+      "expected": "generalize",
+      "generalized": "sehr erfolgreich bei einem Wettbewerb"
+    }
+  ],
+  "dropped": [
+    "seit der schweren Erkrankung der Mutter"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

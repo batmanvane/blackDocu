@@ -1,0 +1,48 @@
+{
+  "id": "doc_040",
+  "type": "schuelergutachten",
+  "person": "<<SCHUELER_13>>",
+  "direct": [
+    {
+      "text": "Elias Hartmann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Eliass",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Elias",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Eli",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "16.10.2010",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Praxis Dr. Weber",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "nach der Trennung der Eltern",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "wegen der ADHS-Diagnose"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

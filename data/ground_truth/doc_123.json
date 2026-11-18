@@ -1,0 +1,45 @@
+{
+  "id": "doc_123",
+  "type": "elternbrief",
+  "pool": "holdout",
+  "person": "<<SCHUELER_23>>",
+  "direct": [
+    {
+      "text": "Anton Reimann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Anton",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "SV Grün-Weiß Werder",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "der einzige Junge mit Hörgerät an unserer Schule",
+      "category": "MERKMAL",
+      "expected": "local_only",
+      "generalized": "ein Kind mit besonderem Unterstützungsbedarf"
+    },
+    {
+      "text": "seit der Inhaftierung des Vaters",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer belastenden Situation in der Familie"
+    }
+  ],
+  "dropped": [
+    "Reimann, Anton",
+    "die Eltern stammen aus Syrien"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "doc_204",
+  "type": "projektbericht",
+  "pool": "holdout2",
+  "person": "<<SCHUELERIN_01>>",
+  "direct": [
+    {
+      "text": "Lena Hoffmann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lena",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lenchen",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lenas",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Tim",
+      "category": "PERSON_GESCHWISTER"
+    },
+    {
+      "text": "09.11.2012",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Trainer Marco Rinaldi",
+      "category": "PERSON_DRITTE"
+    },
+    {
+      "text": "lena.hoffmann@web.de",
+      "category": "KONTAKT_EMAIL"
+    },
+    {
+      "text": "SV Grün-Weiß Werder",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "Bundessiegerin bei Jugend forscht",
+      "category": "MERKMAL",
+      "expected": "generalize",
+      "generalized": "sehr erfolgreich bei einem Wettbewerb"
+    },
+    {
+      "text": "seit die Familie im Frauenhaus lebt",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer veränderten Wohnsituation"
+    },
+    {
+      "text": "mit diagnostiziertem Asperger-Syndrom",
+      "category": "GESUNDHEIT",
+      "expected": "local_only",
+      "generalized": "mit besonderem Förderbedarf"
+    }
+  ],
+  "dropped": [],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "doc_030",
+  "type": "schuelergutachten",
+  "person": "<<SCHUELER_15>>",
+  "direct": [
+    {
+      "text": "Finn Ostermann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Finns",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Finn",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "16.08.2015",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Ergotherapie Lindenhof",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "das einzige Kind mit Rollstuhl in der Jahrgangsstufe",
+      "category": "MERKMAL",
+      "expected": "local_only"
+    },
+    {
+      "text": "seit dem Tod der Großmutter",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "finn"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

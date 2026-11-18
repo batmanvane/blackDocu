@@ -1,0 +1,49 @@
+{
+  "id": "doc_117",
+  "type": "foerderplan",
+  "pool": "holdout",
+  "person": "<<SCHUELER_19>>",
+  "direct": [
+    {
+      "text": "Jakob Friedrich",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Jakob",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Jakobs",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Krüger",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "20.04.2013",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "mit diagnostiziertem Asperger-Syndrom",
+      "category": "GESUNDHEIT",
+      "expected": "local_only",
+      "generalized": "mit besonderem Förderbedarf"
+    },
+    {
+      "text": "seit die Familie im Frauenhaus lebt",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer veränderten Wohnsituation"
+    }
+  ],
+  "dropped": [
+    "Jaki",
+    "die Eltern stammen aus Syrien"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

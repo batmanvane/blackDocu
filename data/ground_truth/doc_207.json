@@ -1,0 +1,44 @@
+{
+  "id": "doc_207",
+  "type": "foerderplan",
+  "pool": "holdout2",
+  "person": "<<SCHUELER_19>>",
+  "direct": [
+    {
+      "text": "Jakob Friedrich",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Jakob",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Jakobs",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Friedrich, Jakob",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "12.08.2016",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Am Weinberg 102",
+      "category": "ADRESSE"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "ihre Freundin Jule Martens",
+    "seit der Inhaftierung des Vaters"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

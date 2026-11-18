@@ -1,0 +1,48 @@
+{
+  "id": "doc_027",
+  "type": "foerderplan",
+  "person": "<<SCHUELER_06>>",
+  "direct": [
+    {
+      "text": "Emma Schröder",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Emmi",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Emma",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Jana Schröder",
+      "category": "PERSON_ELTERN"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "nimmt wegen ihres Glaubens nicht am Schwimmunterricht teil",
+      "category": "HERKUNFT",
+      "expected": "local_only"
+    },
+    {
+      "text": "das einzige Kind mit Rollstuhl in der Jahrgangsstufe",
+      "category": "MERKMAL",
+      "expected": "local_only"
+    },
+    {
+      "text": "wohnt seit dem Sommer in einer Wohngruppe",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

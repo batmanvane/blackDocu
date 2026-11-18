@@ -1,0 +1,40 @@
+{
+  "id": "doc_101",
+  "type": "zeugnisbemerkung",
+  "pool": "holdout",
+  "person": "<<SCHUELER_16>>",
+  "direct": [
+    {
+      "text": "Amira Haddad",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Amiras",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Amira",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "17.08.2010",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "mit diagnostiziertem Asperger-Syndrom",
+      "category": "GESUNDHEIT",
+      "expected": "local_only",
+      "generalized": "mit besonderem Förderbedarf"
+    }
+  ],
+  "dropped": [],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

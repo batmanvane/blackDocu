@@ -1,0 +1,51 @@
+{
+  "id": "doc_202",
+  "type": "foerderplan",
+  "pool": "holdout2",
+  "person": "<<SCHUELERIN_14>>",
+  "direct": [
+    {
+      "text": "Clara Seidel",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Clara",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Clara Seiddel",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "die Lerntherapeutin Frau Sommerfeld",
+      "category": "PERSON_DRITTE"
+    },
+    {
+      "text": "clara.seidel@web.de",
+      "category": "KONTAKT_EMAIL"
+    },
+    {
+      "text": "Musikschule Fröhlich",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "wegen ihrer Diabetes-Erkrankung",
+      "category": "GESUNDHEIT",
+      "expected": "local_only",
+      "generalized": "aus gesundheitlichen Gründen"
+    }
+  ],
+  "dropped": [
+    "Claras",
+    "seit der schweren Erkrankung der Mutter"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "doc_016",
+  "type": "zeugnisbemerkung",
+  "person": "<<SCHUELER_20>>",
+  "direct": [
+    {
+      "text": "Ida Wolff",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Ida",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Idas",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "03.08.2015",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "die Familie spricht zu Hause Arabisch",
+      "category": "HERKUNFT",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

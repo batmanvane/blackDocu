@@ -1,0 +1,53 @@
+{
+  "id": "doc_211",
+  "type": "zeugnisbemerkung",
+  "pool": "holdout2",
+  "person": "<<SCHUELERIN_20>>",
+  "direct": [
+    {
+      "text": "Ida Wolff",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Idas",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Ida",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Krüger",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "05.01.2013",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Lindenstraße 6",
+      "category": "ADRESSE"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "mit diagnostiziertem Asperger-Syndrom",
+      "category": "GESUNDHEIT",
+      "expected": "local_only",
+      "generalized": "mit besonderem Förderbedarf"
+    },
+    {
+      "text": "Bundessiegerin bei Jugend forscht",
+      "category": "MERKMAL",
+      "expected": "generalize",
+      "generalized": "sehr erfolgreich bei einem Wettbewerb"
+    }
+  ],
+  "dropped": [
+    "der Kinderarzt Dr. Haberland",
+    "seit die Familie im Frauenhaus lebt"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

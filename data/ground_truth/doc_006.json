@@ -1,0 +1,40 @@
+{
+  "id": "doc_006",
+  "type": "zeugnisbemerkung",
+  "person": "<<SCHUELER_23>>",
+  "direct": [
+    {
+      "text": "Anton Reimann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Toni",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "02.07.2012",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Ergotherapie Lindenhof",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "nimmt wegen ihres Glaubens nicht am Schwimmunterricht teil",
+      "category": "HERKUNFT",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "seit dem Tod der Großmutter"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "doc_216",
+  "type": "zeugnisbemerkung",
+  "pool": "holdout2",
+  "person": "<<SCHUELERIN_14>>",
+  "direct": [
+    {
+      "text": "Clara Seidel",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "0331 6955602",
+      "category": "KONTAKT_TELEFON"
+    },
+    {
+      "text": "Kita Sonnenblume",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "der einzige Junge mit Hörgerät an unserer Schule",
+      "category": "MERKMAL",
+      "expected": "local_only",
+      "generalized": "ein Kind mit besonderem Unterstützungsbedarf"
+    }
+  ],
+  "dropped": [
+    "Claras",
+    "sein Freund Ole Petersen",
+    "wegen ihrer Diabetes-Erkrankung"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

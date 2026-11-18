@@ -1,0 +1,33 @@
+{
+  "id": "doc_001",
+  "type": "zeugnisbemerkung",
+  "person": "<<SCHUELER_08>>",
+  "direct": [
+    {
+      "text": "Mia Lorenz",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Mia",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "ist im Herbst aus der Ukraine zu uns gekommen",
+      "category": "HERKUNFT",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "08.09.2011",
+    "die Landesmeisterin im Schach"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

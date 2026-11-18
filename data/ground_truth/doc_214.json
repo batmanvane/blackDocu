@@ -1,0 +1,46 @@
+{
+  "id": "doc_214",
+  "type": "projektbericht",
+  "pool": "holdout2",
+  "person": "<<SCHUELER_05>>",
+  "direct": [
+    {
+      "text": "Jonas Kowalski",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Jonas",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Krüger",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "19.10.2016",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Lindenstraße 83",
+      "category": "ADRESSE"
+    },
+    {
+      "text": "Praxis Dr. Weber",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "mit diagnostiziertem Asperger-Syndrom",
+      "category": "GESUNDHEIT",
+      "expected": "local_only",
+      "generalized": "mit besonderem Förderbedarf"
+    }
+  ],
+  "dropped": [
+    "ihre Freundin Jule Martens"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "doc_128",
+  "type": "elternbrief",
+  "pool": "holdout",
+  "person": "<<SCHUELER_14>>",
+  "direct": [
+    {
+      "text": "Clara Seidel",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Seidel, Clara",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Claras",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Praxis Dr. Weber",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "die Eltern stammen aus Syrien",
+    "mit diagnostiziertem Asperger-Syndrom",
+    "seit der Inhaftierung des Vaters"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

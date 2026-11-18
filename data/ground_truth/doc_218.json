@@ -1,0 +1,57 @@
+{
+  "id": "doc_218",
+  "type": "elternbrief",
+  "pool": "holdout2",
+  "person": "<<SCHUELER_11>>",
+  "direct": [
+    {
+      "text": "Noah Gruber",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Noah",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Krüger",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Ralf Gruber",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "Am Weinberg 47",
+      "category": "ADRESSE"
+    },
+    {
+      "text": "SV Grün-Weiß Werder",
+      "category": "EINRICHTUNG"
+    },
+    {
+      "text": "Kiel",
+      "category": "ORT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "als Pflegekind bei den Großeltern",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "in einer besonderen Familiensituation"
+    },
+    {
+      "text": "nach dem Wechsel von der Waldorfschule in Kiel",
+      "category": "BIOGRAFIE",
+      "expected": "generalize",
+      "generalized": "nach einem Schulwechsel"
+    }
+  ],
+  "dropped": [
+    "sein Freund Ole Petersen",
+    "wegen ihrer Diabetes-Erkrankung"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

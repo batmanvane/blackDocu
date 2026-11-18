@@ -1,0 +1,46 @@
+{
+  "id": "doc_105",
+  "type": "schuelergutachten",
+  "pool": "holdout",
+  "person": "<<SCHUELER_11>>",
+  "direct": [
+    {
+      "text": "Noah Gruber",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Noah",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Ralf Gruber",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "16.02.2013",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Wittenberge",
+      "category": "ORT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "seit der schweren Erkrankung der Mutter",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer belastenden Situation in der Familie"
+    }
+  ],
+  "dropped": [
+    "nach dem Wechsel von der Waldorfschule in Wittenberge"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

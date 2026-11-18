@@ -1,0 +1,49 @@
+{
+  "id": "doc_140",
+  "type": "schuelergutachten",
+  "pool": "holdout",
+  "person": "<<SCHUELER_03>>",
+  "direct": [
+    {
+      "text": "Ben Yilmaz",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Ben",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "der kleine Ben",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Krüger",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "13.02.2014",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "als Pflegekind bei den Großeltern",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "in einer besonderen Familiensituation"
+    },
+    {
+      "text": "die Eltern stammen aus Syrien",
+      "category": "HERKUNFT",
+      "expected": "local_only",
+      "generalized": "die Familie hat Migrationsgeschichte"
+    }
+  ],
+  "dropped": [
+    "Bens",
+    "Murat Yilmaz"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

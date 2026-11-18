@@ -1,0 +1,46 @@
+{
+  "id": "doc_109",
+  "type": "projektbericht",
+  "pool": "holdout",
+  "person": "<<SCHUELER_06>>",
+  "direct": [
+    {
+      "text": "Emma Schröder",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Emmas",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Emmi",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Jana Schröder",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "05.07.2016",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "seit der Inhaftierung des Vaters",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer belastenden Situation in der Familie"
+    }
+  ],
+  "dropped": [
+    "wegen ihrer Diabetes-Erkrankung"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

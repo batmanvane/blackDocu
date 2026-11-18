@@ -1,0 +1,45 @@
+{
+  "id": "doc_036",
+  "type": "zeugnisbemerkung",
+  "person": "<<SCHUELER_17>>",
+  "direct": [
+    {
+      "text": "Luca Engel",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Luca",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "25.11.2016",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Jugendclub Kiste",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "die festgestellte Lese-Rechtschreib-Schwäche",
+      "category": "GESUNDHEIT",
+      "expected": "local_only"
+    },
+    {
+      "text": "nimmt wegen ihres Glaubens nicht am Schwimmunterricht teil",
+      "category": "HERKUNFT",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "Lucas"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

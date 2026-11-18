@@ -1,0 +1,56 @@
+{
+  "id": "doc_116",
+  "type": "zeugnisbemerkung",
+  "pool": "holdout",
+  "person": "<<SCHUELER_19>>",
+  "direct": [
+    {
+      "text": "Jakob Friedrich",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Jakob",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "06.11.2012",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Kita Sonnenblume",
+      "category": "EINRICHTUNG"
+    },
+    {
+      "text": "Brandenburg an der Havel",
+      "category": "ORT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "nach dem Wechsel von der Waldorfschule in Brandenburg an der Havel",
+      "category": "BIOGRAFIE",
+      "expected": "generalize",
+      "generalized": "nach einem Schulwechsel"
+    },
+    {
+      "text": "Bundessiegerin bei Jugend forscht",
+      "category": "MERKMAL",
+      "expected": "generalize",
+      "generalized": "sehr erfolgreich bei einem Wettbewerb"
+    },
+    {
+      "text": "der einzige Junge mit Hörgerät an unserer Schule",
+      "category": "MERKMAL",
+      "expected": "local_only",
+      "generalized": "ein Kind mit besonderem Unterstützungsbedarf"
+    }
+  ],
+  "dropped": [],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

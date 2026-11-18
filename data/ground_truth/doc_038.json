@@ -1,0 +1,40 @@
+{
+  "id": "doc_038",
+  "type": "elternbrief",
+  "person": "<<SCHUELER_11>>",
+  "direct": [
+    {
+      "text": "Noah Gruber",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Noah",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Noahs",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Ralf Gruber",
+      "category": "PERSON_ELTERN"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "wohnt seit dem Sommer in einer Wohngruppe",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "seit dem Tod der Großmutter"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

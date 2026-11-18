@@ -1,0 +1,36 @@
+{
+  "id": "doc_004",
+  "type": "projektbericht",
+  "person": "<<SCHUELER_20>>",
+  "direct": [
+    {
+      "text": "Ida Wolff",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Idas",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Krüger",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "28.10.2013",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "wegen der ADHS-Diagnose",
+      "category": "GESUNDHEIT",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "der Vater ist seit dem Frühjahr arbeitslos"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

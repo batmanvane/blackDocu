@@ -1,0 +1,50 @@
+{
+  "id": "doc_017",
+  "type": "foerderplan",
+  "person": "<<SCHUELER_09>>",
+  "direct": [
+    {
+      "text": "Leon Petrović",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Leons",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Leon",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Olga Petrović",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "08.09.2015",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Jugendclub Kiste",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "das einzige Kind mit Rollstuhl in der Jahrgangsstufe",
+      "category": "MERKMAL",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "der Vater ist seit dem Frühjahr arbeitslos",
+    "die festgestellte Lese-Rechtschreib-Schwäche",
+    "leon"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

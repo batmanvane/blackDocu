@@ -1,0 +1,45 @@
+{
+  "id": "doc_013",
+  "type": "elternbrief",
+  "person": "<<SCHUELER_14>>",
+  "direct": [
+    {
+      "text": "Clara Seidel",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Clara",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Claras",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "24.09.2015",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Grundschule am Weinberg",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "nach der Trennung der Eltern",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [
+    "Seidel, Clara",
+    "wohnt seit dem Sommer in einer Wohngruppe"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "doc_110",
+  "type": "schuelergutachten",
+  "pool": "holdout",
+  "person": "<<SCHUELER_10>>",
+  "direct": [
+    {
+      "text": "Hannah Vogt",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Petra Vogt",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "11.06.2010",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Musikschule Fröhlich",
+      "category": "EINRICHTUNG"
+    },
+    {
+      "text": "Bad Belzig",
+      "category": "ORT"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "Hanni",
+    "nach dem Wechsel von der Waldorfschule in Bad Belzig",
+    "seit der Inhaftierung des Vaters"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

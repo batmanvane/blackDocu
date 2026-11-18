@@ -1,0 +1,35 @@
+{
+  "id": "doc_103",
+  "type": "elternbrief",
+  "pool": "holdout",
+  "person": "<<SCHUELER_19>>",
+  "direct": [
+    {
+      "text": "Jakob Friedrich",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Jakobs",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Krüger",
+      "category": "PERSON_LEHRKRAFT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "wegen ihrer Diabetes-Erkrankung",
+      "category": "GESUNDHEIT",
+      "expected": "local_only",
+      "generalized": "aus gesundheitlichen Gründen"
+    }
+  ],
+  "dropped": [
+    "Jaki",
+    "seit der Inhaftierung des Vaters"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

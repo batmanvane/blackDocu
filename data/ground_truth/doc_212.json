@@ -1,0 +1,51 @@
+{
+  "id": "doc_212",
+  "type": "foerderplan",
+  "pool": "holdout2",
+  "person": "<<SCHUELERIN_18>>",
+  "direct": [
+    {
+      "text": "Marie Kunze",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Mariechen",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Marie",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "12.11.2012",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "als Pflegekind bei den Großeltern",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "in einer besonderen Familiensituation"
+    },
+    {
+      "text": "Bundessiegerin bei Jugend forscht",
+      "category": "MERKMAL",
+      "expected": "generalize",
+      "generalized": "sehr erfolgreich bei einem Wettbewerb"
+    }
+  ],
+  "dropped": [
+    "Lindenstraße 42",
+    "Maries",
+    "sein Freund Ole Petersen",
+    "seit der schweren Erkrankung der Mutter"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

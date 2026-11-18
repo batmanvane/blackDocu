@@ -1,0 +1,44 @@
+{
+  "id": "doc_208",
+  "type": "elternbrief",
+  "pool": "holdout2",
+  "person": "<<SCHUELERIN_12>>",
+  "direct": [
+    {
+      "text": "Lina Becker",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lina",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "02.10.2013",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "lina.becker@web.de",
+      "category": "KONTAKT_EMAIL"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "seit der schweren Erkrankung der Mutter",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer belastenden Situation in der Familie"
+    }
+  ],
+  "dropped": [
+    "Linas",
+    "ihre Freundin Jule Martens",
+    "mit diagnostiziertem Asperger-Syndrom"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

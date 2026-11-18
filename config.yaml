@@ -1,0 +1,52 @@
+llm:
+  host: studio            # studio | desktop
+  fallback: desktop       # wird genommen, wenn host nicht antwortet
+  model: qwen3.6:35b-a3b  # auf beiden Rechnern vorhanden
+  temperature: 0.0
+  think: false
+  num_ctx: 8192
+  stage3_hosts: []        # leer = alle erreichbaren; [studio] für reproduzierbare Tuning-Läufe
+  hosts:
+    studio: http://127.0.0.1:11434
+    desktop: http://100.109.37.47:11434
+
+models:                    # Ablage der Modellgewichte (wird beim Start als Umgebungsvariable gesetzt)
+  HF_HOME: /Volumes/Models/huggingface
+  FLAIR_CACHE_ROOT: /Volumes/Models/flair
+
+noirdoc:
+  namespace: klasse_7b_synth
+  namespace_root: out/noirdoc_ns   # synthetische Daten: im Projekt; echte Daten: ~/.noirdoc (Default)
+  detectors: [presidio, gliner, flair]
+  score_threshold: 0.5
+  ignore_types: []
+  allowlist: data/allowlist.txt   # Schulwörter, die NER nicht maskieren soll
+
+stage3:
+  prompt: v1             # prompts/stage3/v1.md
+
+fewshot:
+  enabled: false
+  k: 4
+  embed_host: desktop
+  embed_model: qwen3-embedding:0.6b
+
+verify:
+  fuzzy_threshold: 85
+  block_types: [PERSON]
+  min_score: 0.6
+  strict_types: [EMAIL, EMAIL_ADDRESS, PHONE, PHONE_NUMBER, IBAN, IBAN_CODE, CREDIT_CARD, SVNR, STEUER_ID, DE_STEUER_ID, IP_ADDRESS]
+  sources: [flair, gliner]   # Presidio-PERSON lieferte nur Fehlalarme (Förderplan, Ain)
+
+namelist:
+  path: data/namelist.csv
+  fuzzy_threshold: 90
+
+paths:
+  synthetic: data/synthetic
+  ground_truth: data/ground_truth
+  pseudonymized: out/pseudonymized
+  blocked: out/blocked
+  local_only: out/local_only
+  report: out/report.md
+  decisions_db: out/decisions.sqlite

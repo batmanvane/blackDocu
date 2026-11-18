@@ -1,0 +1,30 @@
+{
+  "id": "doc_029",
+  "type": "projektbericht",
+  "person": "<<SCHUELER_23>>",
+  "direct": [
+    {
+      "text": "Anton Reimann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Toni",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "18.03.2012",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "ist im Herbst aus der Ukraine zu uns gekommen"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

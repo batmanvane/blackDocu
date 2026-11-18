@@ -1,0 +1,44 @@
+{
+  "id": "doc_106",
+  "type": "zeugnisbemerkung",
+  "pool": "holdout",
+  "person": "<<SCHUELER_17>>",
+  "direct": [
+    {
+      "text": "Luca Engel",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lucas",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Luca",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "11.09.2011",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Praxis Dr. Weber",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "als Pflegekind bei den Großeltern",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "in einer besonderen Familiensituation"
+    }
+  ],
+  "dropped": [],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "doc_220",
+  "type": "schuelergutachten",
+  "pool": "holdout2",
+  "person": "<<SCHUELER_25>>",
+  "direct": [
+    {
+      "text": "Karim Aydın",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Karim",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "14.10.2011",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "die Tante Gisela Brenner",
+      "category": "PERSON_DRITTE"
+    },
+    {
+      "text": "Am Weinberg 31",
+      "category": "ADRESSE"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "die Eltern stammen aus Syrien",
+    "seit die Familie im Frauenhaus lebt"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

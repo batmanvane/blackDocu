@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.envrc
+
+# Ergebnisse und Zuordnungen nie einchecken
+out/**
+!out/**/
+!out/**/.gitkeep
+*.sqlite
+*.sqlite3
+*.db
+data/real/
+data/namelist_real*.csv
+.noirdoc/

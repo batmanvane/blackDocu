@@ -1,0 +1,41 @@
+{
+  "id": "doc_203",
+  "type": "elternbrief",
+  "pool": "holdout2",
+  "person": "<<SCHUELER_17>>",
+  "direct": [
+    {
+      "text": "Luca Engel",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Luca",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lucas",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Matthes",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "18.09.2010",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "0331 7301423",
+      "category": "KONTAKT_TELEFON"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "der einzige Junge mit Hörgerät an unserer Schule",
+    "die Tante Gisela Brenner",
+    "mit diagnostiziertem Asperger-Syndrom"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

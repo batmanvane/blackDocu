@@ -1,0 +1,50 @@
+{
+  "id": "doc_034",
+  "type": "projektbericht",
+  "person": "<<SCHUELER_04>>",
+  "direct": [
+    {
+      "text": "Sophie Albrecht",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Sophie",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Seifert",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Birgit Albrecht",
+      "category": "PERSON_GESCHWISTER"
+    },
+    {
+      "text": "22.12.2016",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "Eberswalde",
+      "category": "ORT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "seit der Geburt der Zwillingsschwestern",
+      "category": "FAMILIE",
+      "expected": "generalize"
+    },
+    {
+      "text": "seit dem Umzug aus Eberswalde",
+      "category": "BIOGRAFIE",
+      "expected": "generalize"
+    }
+  ],
+  "dropped": [
+    "Sophies",
+    "nimmt wegen ihres Glaubens nicht am Schwimmunterricht teil"
+  ],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

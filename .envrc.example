@@ -1,0 +1,3 @@
+# Kopieren nach .envrc (oder in die Shell übernehmen), damit Modellgewichte auf /Volumes/Models landen
+export HF_HOME=/Volumes/Models/huggingface
+export FLAIR_CACHE_ROOT=/Volumes/Models/flair

@@ -1,0 +1,47 @@
+{
+  "id": "doc_010",
+  "type": "schuelergutachten",
+  "person": "<<SCHUELER_10>>",
+  "direct": [
+    {
+      "text": "Hannah Vogt",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Hanni",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Herr Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Petra Vogt",
+      "category": "PERSON_ELTERN"
+    },
+    {
+      "text": "20.01.2016",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "SV Grün-Weiß Werder",
+      "category": "EINRICHTUNG"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "die Landesmeisterin im Schach",
+      "category": "MERKMAL",
+      "expected": "generalize"
+    },
+    {
+      "text": "nach der Trennung der Eltern",
+      "category": "FAMILIE",
+      "expected": "local_only"
+    }
+  ],
+  "dropped": [],
+  "host": "desktop",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

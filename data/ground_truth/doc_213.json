@@ -1,0 +1,44 @@
+{
+  "id": "doc_213",
+  "type": "elternbrief",
+  "pool": "holdout2",
+  "person": "<<SCHUELERIN_04>>",
+  "direct": [
+    {
+      "text": "Sophie Albrecht",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Sophies",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Albrecht",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "12.09.2016",
+      "category": "DATUM_GEBURT"
+    },
+    {
+      "text": "sophie.albrecht@web.de",
+      "category": "KONTAKT_EMAIL"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "als Pflegekind bei den Großeltern",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "in einer besonderen Familiensituation"
+    }
+  ],
+  "dropped": [
+    "Birgit Albrecht",
+    "die Nachbarin Frau Kowalczyk",
+    "mit diagnostiziertem Asperger-Syndrom"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}

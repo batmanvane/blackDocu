@@ -1,0 +1,30 @@
+{
+  "id": "doc_007",
+  "type": "foerderplan",
+  "person": "<<SCHUELER_13>>",
+  "direct": [
+    {
+      "text": "Elias Hartmann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Elias",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Krüger",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "01.07.2012",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "seit dem Tod der Großmutter"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

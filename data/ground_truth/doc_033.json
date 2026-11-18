@@ -1,0 +1,39 @@
+{
+  "id": "doc_033",
+  "type": "elternbrief",
+  "person": "<<SCHUELER_01>>",
+  "direct": [
+    {
+      "text": "Lena Hoffmann",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lenas",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lena",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Dombrowski",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "Tim",
+      "category": "PERSON_GESCHWISTER"
+    },
+    {
+      "text": "28.02.2013",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [],
+  "dropped": [
+    "Lenchen",
+    "nimmt wegen ihres Glaubens nicht am Schwimmunterricht teil"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "mittel"
+}

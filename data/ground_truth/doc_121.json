@@ -1,0 +1,40 @@
+{
+  "id": "doc_121",
+  "type": "zeugnisbemerkung",
+  "pool": "holdout",
+  "person": "<<SCHUELER_17>>",
+  "direct": [
+    {
+      "text": "Luca Engel",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Lucas",
+      "category": "PERSON_SCHUELER"
+    },
+    {
+      "text": "Frau Wendland",
+      "category": "PERSON_LEHRKRAFT"
+    },
+    {
+      "text": "10.05.2010",
+      "category": "DATUM_GEBURT"
+    }
+  ],
+  "indirect": [
+    {
+      "text": "seit die Familie im Frauenhaus lebt",
+      "category": "FAMILIE",
+      "expected": "local_only",
+      "generalized": "seit einer veränderten Wohnsituation"
+    }
+  ],
+  "dropped": [
+    "Engel, Luca",
+    "als Pflegekind bei den Großeltern",
+    "die Eltern stammen aus Syrien"
+  ],
+  "host": "studio",
+  "model": "qwen3.6:35b-a3b",
+  "sensitive_level": "hoch"
+}
