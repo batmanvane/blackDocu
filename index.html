@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vom Stichpunkt zum Entwurf</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Kalam:wght@400&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: Scroll-Erzählung. Desktop: Schrittkarten links, Ansicht (3 Blätter) rechts fixiert.
+   Handy: Ansicht oben fixiert (zeigt das gerade wichtige Blatt), Karten scrollen darunter. */
+:root{
+  --bg:#f1f2ef; --paper:#ffffff; --paper2:#f7f7f4; --ink:#22272d; --muted:#656c74; --line:#dadcd6;
+  --rule:#e3e8ee; --margin:#d9a7a2;
+  --s1:#3e5c86; --s1bg:#e6ebf2;   /* Tinte: Namen */
+  --s2:#4b7568; --s2bg:#e4eeea;   /* Salbei: Daten, Orte */
+  --s3:#8a5468; --s3bg:#f3e8ec;   /* Beere: Verallgemeinerung */
+  --ok:#3d6b4b; --okbg:#e3eee6;   /* zurückgewandelt / frei */
+  --f-hand:"Kalam","Segoe Print","Bradley Hand",cursive;
+  --f-body:"Atkinson Hyperlegible",system-ui,-apple-system,sans-serif;
+  --f-head:"Space Grotesk",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#16191d; --paper:#1e2227; --paper2:#23282e; --ink:#e3e6e9; --muted:#9aa1a9; --line:#323840;
+  --rule:#2a3139; --margin:#6e4642;
+  --s1:#a3b6d4; --s1bg:#28313f; --s2:#a1c2b6; --s2bg:#243530; --s3:#d0a6b6; --s3bg:#3a2a31;
+  --ok:#a9cfb2; --okbg:#24352a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#16191d; --paper:#1e2227; --paper2:#23282e; --ink:#e3e6e9; --muted:#9aa1a9; --line:#323840;
+  --rule:#2a3139; --margin:#6e4642;
+  --s1:#a3b6d4; --s1bg:#28313f; --s2:#a1c2b6; --s2bg:#243530; --s3:#d0a6b6; --s3bg:#3a2a31;
+  --ok:#a9cfb2; --okbg:#24352a; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--f-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+.wrap{max-width:1360px;margin:0 auto}
+.intro{padding-block:28px 8px;display:grid;gap:10px;max-width:78ch}
+h1{font:700 clamp(1.55rem,3vw,2.3rem)/1.15 var(--f-head);margin:0;text-wrap:balance;letter-spacing:-.015em}
+.lead{margin:0;color:var(--muted)}
+.hint{font-size:.86rem;color:var(--muted)}
+
+/* ---------- Bühne ---------- */
+.story{display:grid;grid-template-columns:300px minmax(0,1fr);gap:28px;align-items:start;margin-top:12px}
+.steps{display:grid;gap:0;padding-bottom:30vh}
+.step{min-height:78vh;display:flex;align-items:center}
+.step:first-child{min-height:60vh;align-items:flex-start;padding-top:8px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:16px 18px;opacity:.45;transition:opacity .3s,border-color .3s}
+.step.active .card{opacity:1;border-color:var(--ink)}
+.card .k{font:700 .72rem var(--f-head);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.card h3{font:700 1.08rem/1.3 var(--f-head);margin:4px 0 6px}
+.card p{margin:0;font-size:.95rem}
+.card ul{margin:8px 0 0;padding-left:18px;font-size:.9rem}
+.card li{margin:3px 0}
+.arrow{color:var(--muted)}
+
+.viewer{position:sticky;top:max(12px,env(safe-area-inset-top,0px));height:calc(100vh - 24px);display:grid;grid-template-rows:auto auto minmax(0,1fr);gap:10px;z-index:5}
+.vhead{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tab{font:700 .85rem var(--f-body);border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer}
+.tab[aria-selected="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.tab:focus-visible,.dot:focus-visible{outline:3px solid var(--s1);outline-offset:2px}
+.dots{display:flex;gap:6px;align-items:center}
+.dot{width:26px;height:6px;border-radius:3px;border:0;background:var(--line);cursor:pointer;padding:0}
+.dot.on{background:var(--ink)}
+.dot.done{background:var(--muted)}
+.vstatus{font-size:.88rem;color:var(--muted);min-height:1.4em}
+.vstatus b{color:var(--ink)}
+
+.window{overflow:hidden;min-height:0;border-radius:10px}
+.track{--vis:3;--off:0;display:grid;grid-template-columns:repeat(3,calc((100% - (var(--vis) - 1)*12px)/var(--vis)));gap:12px;height:100%;
+  transform:translateX(calc(var(--off) * -1 * ((100% - (var(--vis) - 1)*12px)/var(--vis) + 12px)));transition:transform .5s cubic-bezier(.3,.7,.2,1)}
+.pane{min-width:0;display:grid;grid-template-rows:auto minmax(0,1fr);gap:6px;opacity:.55;transition:opacity .35s}
+.pane.focus{opacity:1}
+.pane h2{margin:0;font:700 .74rem var(--f-head);letter-spacing:.09em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.pane h2 span:last-child{font-weight:500;letter-spacing:.02em;text-transform:none}
+.sheet{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 14px;overflow:auto;position:relative}
+.notes{background-image:linear-gradient(to bottom,transparent 29px,var(--rule) 30px);background-size:100% 30px;background-attachment:local;
+  padding-left:40px;font:400 1.05rem/30px var(--f-hand)}
+.notes::before{content:"";position:absolute;left:28px;top:0;bottom:0;border-left:2px solid var(--margin)}
+.notes div{white-space:pre-wrap}
+.hl{border-radius:3px;transition:background .35s,box-shadow .35s}
+.hl.on1{background:var(--s1bg);box-shadow:0 2px 0 var(--s1)} .hl.on2{background:var(--s2bg);box-shadow:0 2px 0 var(--s2)} .hl.on3{background:var(--s3bg);box-shadow:0 2px 0 var(--s3)}
+.gate{font-size:.93rem;line-height:1.75}
+.gate div{white-space:pre-wrap;padding:2px 0;border-bottom:1px dashed var(--line)}
+.gate div:last-child{border-bottom:0}
+.old{color:var(--muted);text-decoration:line-through;text-decoration-thickness:1.5px;margin-right:4px}
+.chip{font:700 .74rem/1 var(--f-body);letter-spacing:.02em;border:1px solid currentColor;border-radius:5px;padding:2px 6px;white-space:nowrap;display:inline-block;vertical-align:1px;background:var(--paper2)}
+.chip.c1{color:var(--s1)} .chip.c2{color:var(--s2)}
+.gen{color:var(--s3);background:var(--s3bg);border-radius:3px;padding:0 3px}
+.fresh{animation:pop .5s ease-out both}
+@keyframes pop{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.badge{font:700 .74rem var(--f-body);border-radius:999px;padding:3px 9px;border:1px solid var(--line);color:var(--muted)}
+.badge.ok{color:var(--ok);border-color:var(--ok);background:var(--okbg)}
+.letter{font-size:.95rem;line-height:1.7}
+.letter .ph{transition:opacity .3s}
+.real{color:var(--ok);background:var(--okbg);border-radius:3px;padding:0 3px;font-weight:700}
+.empty{color:var(--muted);font-style:italic}
+.outro{display:grid;gap:12px;max-width:90ch;margin-top:8px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--muted)}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.disclaimer{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin:0}
+
+/* Handy und Tablet: Ansicht oben fixiert, Karten darunter */
+@media (max-width:1000px){
+  .story{grid-template-columns:minmax(0,1fr);gap:0}
+  .viewer{order:-1;top:env(safe-area-inset-top,0px);height:min(58vh,520px);min-height:340px;background:var(--bg);padding-block:8px 10px;
+    border-bottom:1px solid var(--line);margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
+  .steps{padding-bottom:40vh}
+  .step{min-height:66vh;align-items:flex-start;padding-top:30vh}
+  .step:first-child{min-height:50vh;padding-top:24px}
+  .card{opacity:.6}
+  .dot{width:16px}
+  .notes{font-size:1rem}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <section class="intro">
+    <h1>Vom Stichpunkt zum Entwurf, ohne dass Namen die Schule verlassen</h1>
+    <p class="lead">Drei Beispiele aus dem Testbetrieb: Die Lehrkraft schreibt Notizen, eine KI formuliert daraus einen Text, und dazwischen sorgt der Schulrechner dafür, dass die KI keinen echten Namen zu sehen bekommt. Alle Namen sind erfunden; die Texte sind echte Ausgaben der Pipeline.</p>
+    <p class="hint">Nach unten scrollen: Jeder Schritt verändert die Ansicht.</p>
+  </section>
+
+  <section class="story">
+    <div class="steps" id="steps"></div>
+    <div class="viewer" id="viewer">
+      <div class="vhead">
+        <div class="tabs" role="tablist" id="tabs"></div>
+        <div class="dots" id="dots" aria-label="Schritte"></div>
+      </div>
+      <div class="vstatus" id="vstatus" aria-live="polite"></div>
+      <div class="window">
+        <div class="track" id="track">
+          <div class="pane" id="pane0"><h2><span>1 · Notizen</span><span>bleiben lokal</span></h2><div class="sheet notes" id="notes"></div></div>
+          <div class="pane" id="pane1"><h2><span>2 · Das sieht die KI</span><span>nur Platzhalter</span></h2><div class="sheet gate" id="gate"></div></div>
+          <div class="pane" id="pane2"><h2><span>3 · Ergebnis</span><span id="letterlbl">KI-Entwurf</span></h2><div class="sheet letter" id="letter"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="outro">
+    <div class="legend">
+      <span><i style="background:var(--s1)"></i>Stufe 1: Namen aus der Klassenliste</span>
+      <span><i style="background:var(--s2)"></i>Stufe 2: Daten, Orte, Einrichtungen</span>
+      <span><i style="background:var(--s3)"></i>Stufe 3: sensible Hinweise verallgemeinert</span>
+      <span><i style="background:var(--ok)"></i>lokal wieder eingesetzt</span>
+    </div>
+    <p class="disclaimer">Forschungsprototyp aus einem Testbetrieb mit erfundenen Daten, kein zertifiziertes oder geprüftes Verfahren. Die Erkennung ist nicht vollständig; pseudonymisierte Daten bleiben personenbezogen (Art. 4 Nr. 5 DSGVO). Ein Einsatz mit echten Daten setzt eine datenschutzrechtliche Prüfung durch die Schule voraus. Die KI liefert nur Entwürfe; die Lehrkraft prüft und verantwortet jeden Text.</p>
+  </section>
+</div>
+<script>
+const DATA = [{"title": "Elternmail aus Stichpunkten", "lines": [[{"t": "Mail an "}, {"o": "Andrea Hoffmann", "r": "<<MUTTER_01>>", "s": 1}, {"t": " wg. "}, {"o": "Lena", "r": "<<SCHUELERIN_01>>", "s": 1}], [{"t": "- "}, {"o": "Lena", "r": "<<SCHUELERIN_01>>", "s": 1}, {"t": " fehlt seit 3 Wochen oft montags"}], [{"t": "- "}, {"o": "seit der Trennung der Eltern", "r": "in einer aktuellen familiären Situation", "s": 3}, {"t": " sehr still"}], [{"t": "- Hausaufgaben Mathe fehlen 5x"}], [{"t": "- Gesprächstermin anbieten: "}, {"o": "Do 27.11.2026", "r": "<<DATE_1>>", "s": 2}, {"t": ", 15 Uhr, Raum 204"}], [{"t": "- "}, {"o": "Frau Krüger", "r": "<<LEHRERIN_01>>", "s": 1}, {"t": " (Schulsozialarbeit) könnte dazukommen"}]], "draft": [{"t": "Sehr geehrte Frau "}, {"ph": "<<MUTTER_01>>", "lbl": "Mutter 1", "real": "Andrea Hoffmann"}, {"t": ", ich möchte Sie gerne bezüglich der aktuellen Situation von "}, {"ph": "<<SCHUELERIN_01>>", "lbl": "Schülerin 1", "real": "Lena"}, {"t": " kurz ansprechen. Leider fehlt sie in den letzten drei Wochen häufig am Montag, was uns natürlich Sorgen bereitet. Zudem wirkt sie in einer derzeit familiären Situation sehr still und zurückhaltend im Unterricht. Auch die Hausaufgaben in Mathe sind bisher fünfmal nicht eingereicht worden. Um das Ganze besser einordnen zu können, würde ich gerne einen Gesprächstermin mit Ihnen vereinbaren. Dieser findet am "}, {"ph": "<<DATE_1>>", "lbl": "Datum 1", "real": "Do 27.11.2026"}, {"t": " um 15 Uhr in Raum 204 statt. Gerne könnte auch "}, {"ph": "<<LEHRERIN_01>>", "lbl": "Lehrerin 1", "real": "Sabine Krüger"}, {"t": " von der Schulsozialarbeit anwesend sein, um weitere Unterstützungsmöglichkeiten aufzuzeigen. Ich freue mich auf Ihre Rückmeldung und ein persönliches Gespräch."}], "llm": [["seit der Trennung der Eltern", "in einer aktuellen familiären Situation"]]}, {"title": "Zeugnisbemerkung aus Stichpunkten", "lines": [[{"o": "Maximilian Brandt", "r": "<<SCHUELER_02>>", "s": 1}, {"t": ", 7b"}], [{"t": "- "}, {"o": "Maxi", "r": "<<SCHUELER_02>>", "s": 1}, {"t": " arbeitet in Bio und Mathe sehr engagiert"}], [{"t": "- wegen "}, {"o": "der ADHS-Diagnose", "r": "eines festgestellten Förderbedarfs", "s": 3}, {"t": " oft unruhig in langen Stillarbeitsphasen"}], [{"t": "- hilft "}, {"o": "Ben Yilmaz", "r": "<<SCHUELER_03>>", "s": 1}, {"t": " regelmäßig beim Lesen"}], [{"t": "- Streitschlichter seit Februar"}], [{"t": "- Heftführung unordentlich"}]], "draft": [{"t": "In den Fächern Biologie und Mathese zeigt "}, {"ph": "<<SCHUELER_02>>", "lbl": "Schüler 2", "real": "Maximilian"}, {"t": " eine sehr engagierte und motivierte Arbeitsweise, die wir wertschätzen. Aufgrund eines festgestellten Förderbedarfs kann er sich in langen Stillarbeitsphasen noch schwerer konzentrieren, was jedoch durch seine soziale Kompetenz ausgeglichen wird. Als Streitschlichter seit Februar und als regelmäßiger Helfer beim Lesen für "}, {"ph": "<<SCHUELER_03>>", "lbl": "Schüler 3", "real": "Ben"}, {"t": " unterstreicht er sein hohes soziales Engagement und seine Hilfsbereitschaft in der Klasse. Bei der Heftführung wäre eine sorgfältigere Ordnung wünschenswert, um den bisherigen Lernerfolg optimal zu dokumentieren."}], "llm": [["wegen der ADHS-Diagnose", "wegen eines festgestellten Förderbedarfs"]]}, {"title": "Projektbewertung aus Notizen", "lines": [[{"t": "Projektbericht '"}, {"o": "Wasserqualität der Havel", "r": "<<LOCATION_1>>", "s": 2}, {"t": "' – "}, {"o": "Amira Haddad", "r": "<<SCHUELERIN_16>>", "s": 1}, {"t": " & "}, {"o": "Jonas Kowalski", "r": "<<SCHUELER_05>>", "s": 1}], [{"t": "- Messreihe sauber, 12 Proben, Fotos gut"}], [{"t": "- "}, {"o": "Amira", "r": "<<SCHUELERIN_16>>", "s": 1}, {"t": ": Auswertung und Diagramme, sehr selbstständig"}], [{"t": "- "}, {"o": "Jonas", "r": "<<SCHUELER_05>>", "s": 1}, {"t": ": Literaturteil dünn, Quellen fehlen"}], [{"t": "- Präsentation am "}, {"o": "14.11.2026", "r": "<<DATE_2>>", "s": 2}, {"t": " überzeugend"}], [{"t": "- "}, {"o": "Amira", "r": "<<SCHUELERIN_16>>", "s": 1}, {"t": " "}, {"o": "ist die Landesmeisterin im Schach", "r": "hat besondere Leistungen in einem Bereich gezeigt", "s": 3}, {"t": " – hat Projekt trotz Turnieren pünktlich abgegeben"}]], "draft": [{"t": "Der Projektbericht von "}, {"ph": "<<SCHUELERIN_16>>", "lbl": "Schülerin 16", "real": "Amira"}, {"t": " und "}, {"ph": "<<SCHUELER_05>>", "lbl": "Schüler 5", "real": "Jonas"}, {"t": " zur Untersuchung in '"}, {"ph": "<<LOCATION_1>>", "lbl": "Ort 1", "real": "Wasserqualität der Havel"}, {"t": "' überzeugt durch eine saubere Messreihe mit 12 Proben und gut dokumentierten Fotos. "}, {"ph": "<<SCHUELERIN_16>>", "lbl": "Schülerin 16", "real": "Amira"}, {"t": " hat sich dabei besonders selbstständig bei der Auswertung und Erstellung der Diagramme bewährt, was als besondere Leistung gewürdigt wird. Im Gegensatz dazu ist der Literaturteil von "}, {"ph": "<<SCHUELER_05>>", "lbl": "Schüler 5", "real": "Jonas"}, {"t": " zu dünn besetzt und weist fehlende Quellenangaben auf, was die wissenschaftliche Fundierung schwächt. Die gemeinsame Präsentation am "}, {"ph": "<<DATE_2>>", "lbl": "Datum 2", "real": "14.11.2026"}, {"t": " war jedoch insgesamt überzeugend und hat die Mängel teilweise ausgeglichen. Trotz der termingebundenen Herausforderungen durch Turniere wurde das Projekt pünktlich eingereicht, was Disziplin zeigt. Aufgrund der starken praktischen Arbeit und der guten Präsentation schlage ich die Note 3 vor."}], "llm": [["ist die Landesmeisterin im Schach", "hat besondere Leistungen in einem Bereich gezeigt"]]}];
+const $ = id => document.getElementById(id);
+const PH = /(<<[A-Z_]+_\d+>>)/;
+const NAMEKINDS = new Set(["SCHUELER","SCHUELERIN","SCHUELERKIND","LEHRER","LEHRERIN","LEHRKRAFT","MUTTER","VATER","ELTERNTEIL","BRUDER","SCHWESTER","GESCHWISTER","FAMILIE","MEHRDEUTIG"]);
+const LABEL = {SCHUELERIN:"Schülerin",SCHUELER:"Schüler",LEHRERIN:"Lehrerin",LEHRER:"Lehrer",MUTTER:"Mutter",VATER:"Vater",DATE:"Datum",LOCATION:"Ort",ORGANIZATION:"Organisation",PERSON:"Person",FAMILIE:"Familie"};
+const PANE_OF_STEP = [0,1,1,1,1,2,2];
+let cur = 0, step = -1;
+
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const kindOf = ph => ph.slice(2, -2).replace(/_\d+$/, "");
+const label = ph => `${LABEL[kindOf(ph)] || kindOf(ph)} ${ph.match(/_(\d+)>>$/)[1]}`;
+const chip = (ph, extra = "") => `<span class="chip ${NAMEKINDS.has(kindOf(ph)) ? "c1" : "c2"} ${extra}" title="${esc(ph)}">${esc(label(ph))}</span>`;
+const withChips = (t, extra) => t.split(PH).map(p => PH.test(p) ? chip(p, extra) : esc(p)).join("");
+const plain = t => t.split(PH).map(p => PH.test(p) ? label(p) : p).join("");
+const reps = (c, s) => [...new Map(DATA[c].lines.flat().filter(x => x.o && x.s === s).map(x => [x.o + "|" + x.r, x])).values()];
+
+/* ---------- Texte der Schritte (aus den Daten erzeugt) ---------- */
+function stepsFor(c){
+  const d = DATA[c], list = s => {
+    const r = reps(c, s);
+    return r.length ? "<ul>" + r.map(x => `<li>„${esc(x.o)}“ <span class="arrow">→</span> ${s === 3 ? "„" + esc(plain(x.r)) + "“" : withChips(x.r)}</li>`).join("") + "</ul>" : "";
+  };
+  const names = d.draft.filter(p => p.ph);
+  const uniq = [...new Map(names.map(p => [p.ph, p])).values()];
+  return [
+    {k:"Notizen", h:"Die Lehrkraft schreibt Stichpunkte", p:"So, wie sie es immer tut: mit Namen, Daten und allem, was ihr wichtig ist. Diese Fassung bleibt auf dem Schulrechner."},
+    {k:"Stufe 1 · Namensliste", h:"Namen aus der Klassenliste werden ersetzt", p:"Der Rechner kennt die Klassenliste mit Spitznamen und Schreibvarianten. Jede Person bekommt einen festen Platzhalter, der auch ihr Geschlecht trägt, damit die KI grammatisch richtig schreibt.", extra:list(1)},
+    {k:"Stufe 2 · Erkennung", h:"Daten, Orte und Einrichtungen", p: reps(c,2).length ? "Erkennungsmodelle und feste Regeln finden, was nicht auf der Liste steht: Datumsangaben, Orte, Einrichtungen, E-Mail-Adressen, Telefonnummern." : "In diesem Text gibt es keine Daten, Orte oder Einrichtungen. Fächer wie Bio und Mathe bleiben bewusst stehen.", extra:list(2)},
+    {k:"Stufe 3 · lokales Sprachmodell", h:"Sensible Hinweise werden verallgemeinert", p:"Ein Sprachmodell auf dem Schulrechner sucht nach Hinweisen, die eine Person auch ohne Namen erkennbar machen: Diagnosen, Familienereignisse, seltene Erfolge.", extra:list(3)},
+    {k:"Stufe 4 · Prüfstufe", h:"Zweite Kontrolle, dann Freigabe", p:"Eine unabhängige Prüfung sucht im Ergebnis noch einmal nach Namen, Daten und Kontakten. Findet sie etwas, wird der Text gesperrt. Hier: nichts gefunden. Weil der Text Familie oder Gesundheit berührt, bleibt er beim lokalen Modell."},
+    {k:"KI-Entwurf", h:"Die KI schreibt den Text", p:"Das Sprachmodell formuliert aus der pseudonymisierten Fassung einen Entwurf. Es arbeitet nur mit Platzhaltern wie " + (uniq[0] ? chip(uniq[0].ph) : "„Schülerin 01“") + " und kennt keinen echten Namen."},
+    {k:"Rückwandlung", h:"Auf dem Schulrechner kommen die Namen zurück", p:"Die Zuordnungstabelle hat den Rechner nie verlassen. Sie setzt die echten Namen wieder ein; die Lehrkraft prüft, überarbeitet und unterschreibt.", extra:"<ul>" + uniq.map(p => `<li>${chip(p.ph)} <span class="arrow">→</span> ${esc(p.real)}</li>`).join("") + "</ul>"},
+  ];
+}
+
+/* ---------- Ansicht für einen Schritt (idempotent, auch rückwärts) ---------- */
+function render(c, st, prevSt){
+  const d = DATA[c];
+  // Notizen: Markierungen bis zur aktuellen Stufe
+  $("notes").innerHTML = d.lines.map(l => "<div>" + l.map(x => {
+    if (x.t !== undefined) return esc(x.t);
+    const on = st >= 1 && st <= 4 && x.s <= Math.min(st, 3) ? ` on${x.s}` : "";
+    return `<span class="hl${on}">${esc(x.o)}</span>`;
+  }).join("") + "</div>").join("");
+  // KI-Fassung: Stufen bis st angewandt; die aktuelle Stufe zeigt alt → neu
+  const stage = Math.min(st, 4);
+  $("gate").innerHTML = d.lines.map(l => "<div>" + l.map(x => {
+    if (x.t !== undefined) return esc(x.t);
+    const neu = x.s === 3 ? `<span class="gen">${withChips(x.r)}</span>` : withChips(x.r);
+    if (stage >= 1 && x.s < stage) return neu;
+    if (stage >= 1 && x.s === stage) return `<span class="old">${esc(x.o)}</span><span class="${prevSt !== st ? "fresh" : ""}">${neu}</span>`;
+    return esc(x.o);
+  }).join("") + "</div>").join("") +
+    (st >= 4 ? `<div class="badges"><span class="badge ok">Prüfstufe: frei</span><span class="badge">nur lokales Modell</span></div>` : "");
+  // Ergebnis
+  if (st < 5){
+    $("letter").innerHTML = `<p class="empty">Hier erscheint der Entwurf der KI, sobald die Prüfstufe frei gegeben hat.</p>`;
+    $("letterlbl").textContent = "KI-Entwurf";
+  } else {
+    let n = 0;
+    $("letter").innerHTML = d.draft.map(p => {
+      if (p.t !== undefined) return esc(p.t);
+      if (st === 5) return chip(p.ph, prevSt < 5 ? "fresh" : "");
+      return `<span class="real ${prevSt !== 6 ? "fresh" : ""}" style="animation-delay:${(n++) * 120}ms">${esc(p.real)}</span>`;
+    }).join("");
+    $("letterlbl").textContent = st === 5 ? "KI-Entwurf mit Platzhaltern" : "mit echten Namen, nur lokal";
+  }
+  // Blätter, Fokus und Verschiebung je nach Breite
+  const vis = innerWidth > 1300 ? 3 : innerWidth > 640 ? 2 : 1;
+  const active = PANE_OF_STEP[st];
+  const off = vis === 3 ? 0 : vis === 2 ? (active >= 2 ? 1 : 0) : active;
+  $("track").style.setProperty("--vis", vis);
+  $("track").style.setProperty("--off", off);
+  [0,1,2].forEach(i => $("pane" + i).classList.toggle("focus", i === active || (vis === 3 && st >= 1 && st <= 4 && i === 0)));
+  // Status und Punkte
+  const s = stepsFor(c)[st];
+  $("vstatus").innerHTML = `<b>${esc(s.k)}:</b> ${esc(s.h)}`;
+  [...$("dots").children].forEach((b, i) => { b.className = "dot" + (i === st ? " on" : i < st ? " done" : ""); });
+}
+
+/* ---------- Aufbau ---------- */
+function build(c){
+  $("steps").innerHTML = stepsFor(c).map((s, i) =>
+    `<div class="step" data-i="${i}"><div class="card"><div class="k">${i + 1} / 7 · ${esc(s.k)}</div><h3>${esc(s.h)}</h3><p>${s.p}</p>${s.extra || ""}</div></div>`).join("");
+  $("tabs").replaceChildren(...DATA.map((d, i) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "tab"; b.id = "tab-" + i; b.setAttribute("role", "tab");
+    b.setAttribute("aria-selected", String(i === c)); b.textContent = d.title.replace(" aus Stichpunkten", "").replace(" aus Notizen", "");
+    b.onclick = () => { cur = i; build(i); step = -1; window.scrollTo({top: $("steps").offsetTop - (innerWidth > 1000 ? 20 : $("viewer").offsetHeight), behavior: "smooth"}); onScroll(); };
+    return b;
+  }));
+  $("dots").replaceChildren(...Array.from({length:7}, (_, i) => {
+    const b = document.createElement("button"); b.type = "button"; b.className = "dot"; b.id = "dot-" + i;
+    b.setAttribute("aria-label", "Schritt " + (i + 1));
+    b.onclick = () => document.querySelector(`.step[data-i="${i}"]`).scrollIntoView({block: "center", behavior: "smooth"});
+    return b;
+  }));
+  const prev = step; step = Math.max(0, step);
+  render(c, step, prev);
+}
+
+/* ---------- Scroll: welcher Schritt liegt an der Leselinie? ---------- */
+let ticking = false;
+function onScroll(){
+  if (ticking) return; ticking = true;
+  requestAnimationFrame(() => {
+    ticking = false;
+    const line = innerWidth > 1000 ? innerHeight * .5 : $("viewer").getBoundingClientRect().bottom + (innerHeight - $("viewer").getBoundingClientRect().bottom) * .45;
+    let best = 0;
+    document.querySelectorAll(".step").forEach(el => { if (el.getBoundingClientRect().top <= line) best = +el.dataset.i; });
+    document.querySelectorAll(".step").forEach(el => el.classList.toggle("active", +el.dataset.i === best));
+    if (best !== step){ const prev = step; step = best; render(cur, step, prev); }
+  });
+}
+addEventListener("scroll", onScroll, {passive: true});
+addEventListener("resize", () => render(cur, step, step));
+build(0); onScroll();
+
+</script>
+
+</body>
+</html>
